@@ -1,15 +1,24 @@
 package ar.com.unpaz.model;
 
 public abstract class Vehiculo {
-	
+	private String tipoVehiculo;
 	private String nroPatente;
 	private String marca;
 	protected double cantCombustible;
 	
-	public Vehiculo(String nroPatente, String marca, double cantCombustible ) {
+	public Vehiculo(String tipoVehiculo, String nroPatente, String marca, double cantCombustible ) {
+		this.tipoVehiculo = tipoVehiculo; 
 		this.nroPatente = nroPatente;
 		this.marca = marca;
 		this.cantCombustible = cantCombustible;
+	}
+
+	public String getTipoVehiculo() {
+		return tipoVehiculo;
+	}
+
+	public void setTipoVehiculo(String tipoVehiculo) {
+		this.tipoVehiculo = tipoVehiculo;
 	}
 
 	public String getNroPatente() {

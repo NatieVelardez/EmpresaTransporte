@@ -3,7 +3,7 @@ package ar.com.unpaz.model;
 public class Moto extends Vehiculo{
 
 	public Moto(String nroPatente, String marca, double cantCombustible) {
-		super(nroPatente, marca, cantCombustible);
+		super("Moto", nroPatente, marca, cantCombustible);
 	}
 	
 	
@@ -12,12 +12,10 @@ public class Moto extends Vehiculo{
 			double consumo = Km / 20.0;
 			if(this.cantCombustible >= consumo) {
 				this.cantCombustible -= consumo;
-				System.out.println("Moto [" + getNroPatente() + "] avanzó " + Km + "Km. ");
+				System.out.println("Estado: Avanzó " + Km + "Km. ");
 			} else {
-				System.out.println("Moto["+ getNroPatente() + "] no tiene combustible suficiente.");
-			}
-		}
-		
-		
-	}
+				System.out.println("Estado: >>>NO tiene suficiente combustible para " + Km + "Km.<<<");
+  }
+ }
+}
 
